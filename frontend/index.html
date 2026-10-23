@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- iPhone Viewport & Safe Area 支援 (viewport-fit=cover 支援全螢幕與動態島/瀏海) -->
+    <meta 
+      name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" 
+    />
+    
+    <title>我的股票 - 個人即時資產管理</title>
+    <meta name="description" content="個人台股、ETF 即時資產管理、加權成本計算、除息追蹤與定期定額複利計算器" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- iOS Safari PWA 專用相容設定 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="我的股票" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+
+    <!-- 支援全螢幕 Standalone 模式識別 -->
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/icons/favicon.png" />
+
+    <!-- Theme Color 動態適配 -->
+    <meta name="theme-color" content="#0B0F19" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)" />
+
+    <!-- 預載 Google Fonts 優質無襯線字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+services:
+  stock-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: taiwan-stock-app
+    restart: always
+    ports:
+      - "8889:8889"
+    environment:
+      - NODE_ENV=production
+      - PORT=8889
+      - DB_DIR=/app/database
+      - JWT_SECRET=${JWT_SECRET:?請在 .env 設定 JWT_SECRET(可用 openssl rand -hex 32 產生)}
+    volumes:
+      # 持久化保存 SQLite 資料庫與使用者所有持倉交易數據，重建容器不遺失
+      - ./database:/app/database
